@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  /* background: linear-gradient(#ed213a, #93291e); */
+  background-image: url(./images/sas.jpg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: #ffb100;
+  text-align: center;
+}
+
+form {
+  max-width: 700px;
+}
+
+form > p {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  /* for the underlay */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  /* for the label to inherit */
+  color: rgb(10, 3, 3);
+}
+
+form p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #fbc252;
+  transform: translateX(-110%);
+  transition: transform 0.2s ease-out;
+}
+
+form p:focus-within {
+  /* for the label to inherit */
+  color: rgb(83, 7, 7);
+  text-shadow: 1px 1px 1px #000;
+}
+
+form p:focus-within::before {
+  transform: translateX(0);
+}
+
+label {
+  font-size: 1.2rem;
+  flex-basis: 30%;
+  padding: 0.25rem 1px;
+  text-align: start;
+  /* in cooperation with form p:focus-within */
+  color: #ff2929;
+  text-shadow: inherit;
+}
+
+input {
+  font-size: 1.2rem;
+  flex-basis: 100%;
+  width: calc(100% - 2px);
+  padding: 0.25rem 1rem;
+  border-radius: 0.4rem;
+}
+
+#toggleBtn {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  right: 10px;
+  top: 67%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#toggleBtn::before {
+  content: "\f06e";
+  font-family: fontAwesome;
+}
+
+#toggleBtn.hide::before {
+  content: "\f070";
+  font-family: fontAwesome;
+}
+
+.requirements {
+  padding: 30px;
+  margin-top: 10px;
+  margin-left: 35px;
+  text-align: center;
+  border-radius: 8px;
+  background: #f8f5f5;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.requirements ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.requirements ul li {
+  position: relative;
+  list-style: none;
+  font-size: 0.75em;
+  font-weight: 600;
+  transition: 0.5s;
+  text-align: left;
+}
+
+.requirements ul li.valid {
+  color: rgba(43, 40, 40, 0.5);
+}
+
+.requirements ul li::before {
+  content: "\f192";
+  width: 20px;
+  height: 10px;
+  font-family: fontAwesome;
+  display: inline-flex;
+}
+
+.requirements ul li.valid::before {
+  content: "\f00c";
+  color: #54b435;
+  font-family: fontAwesome;
+}
+
+.button-44 {
+  background: linear-gradient(#ed213a, #93291e);
+  border-radius: 11px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: Mija, -apple-system, BlinkMacSystemFont, Roboto, "Roboto Slab",
+    "Droid Serif", "Segoe UI", system-ui, Arial, sans-serif;
+  font-size: 1.15em;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 33.4929px;
+  padding: 0.8em 1em;
+  text-align: center;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
+  text-underline-offset: 1px;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  word-break: break-word;
+  border: 0;
+}
+
+.button-44:active,
+.button-44:focus {
+  border-bottom-style: none;
+  border-color: #dadada;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 3px 3px inset;
+  outline: 0;
+}
+
+.button-44:hover {
+  border-bottom-style: none;
+  border-color: #dadada;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #ccc;
+}
+
+.errMessage {
+  color: red;
+  font-weight: 700;
+}
+
+.logo img {
+  display: flex;
+  margin: 0 auto;
+  width: 20%;
+  height: auto;
+}

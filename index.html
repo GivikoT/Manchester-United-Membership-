@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Manchester United Sign Up Form</title>
+  </head>
+  <body>
+    <main>
+      <form name="sampleForm" action="#" method="POST" autocomplete="off">
+        <div class="logo">
+          <img src="https://i.postimg.cc/LXS0vzcN/united.png" alt="Manchester United Logo" />
+        </div>
+        <div>
+          <h1>Man Utd Membership Sign Up Form</h1>
+        </div>
+        <p>
+          <label for="fullname">Full Name</label>
+          <input
+            type="text"
+            inputmode="text"
+            id="fullname"
+            name="fullname"
+            enterkeyhint="next"
+            autocomplete="off"
+            placeholder="Enter your full name"
+            required
+          />
+          <span class="instructions"><span class="errMessage"></span></span>
+        </p>
+        <p>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            inputmode="email"
+            id="email"
+            name="email"
+            enterkeyhint="next"
+            autocomplete="off"
+            placeholder="Enter your email address"
+            required
+          />
+          <span class="instructions"><span class="errMessage"></span></span>
+        </p>
+        <p>
+          <label for="pass">Password</label>
+          <input
+            type="password"
+            id="pass"
+            name="pass"
+            enterkeyhint="send"
+            autocomplete="off"
+            maxlength="20"
+            minlength="8"
+            required
+          />
+          <span id="toggleBtn"></span>
+          <div class="requirements">
+          <ul>
+            <li id="upper">At least ONE uppercase letter</li>
+            <li id="lower">At least ONE lowercase letter</li>
+            <li id="digit">At least ONE number</li>
+            <li id="special">At least one special character ! @ # $ % ^ & * . , ? ; :</li>
+            <li id="length">At least 10 characters long</li>
+          </ul>
+        </div>
+        </p>
+
+
+        <p>
+          <label for="phone">Cellphone</label>
+          <input
+            type="text"
+            inputmode="tel"
+            name="phone"
+            id="phone"
+            enterkeyhint="next"
+            autocomplete="off"
+            placeholder="include your area code"
+            required
+          />
+          <span class="instructions"><span class="errMessage"></span></span>
+        </p>
+        <p>
+          <label for="otp">One-time-code</label>
+          <input
+            type="text"
+            inputmode="numeric"
+            id="otp"
+            autocomplete="off"
+            enterkeyhint="next"
+            minlength="4"
+            maxlength="4"
+            required
+            placeholder="Enter your one time code here(only digits)"
+          />
+          <span class="instructions"><span class="errMessage"></span></span>
+        </p>
+        <p>
+          <label for="jerseys">Number of Kits You Own</label>
+          <input
+            type="number"
+            inputmode="numeric"
+            name="kits"
+            id="kits"
+            enterkeyhint="next"
+            autocomplete="off"
+            min="0"
+            max="50"
+            value="0"
+            placeholder="Enter the number of Manchester United kits you own"
+          />
+          <span class="instructions"><span class="errMessage"></span></span>
+        </p>
+        <p>
+          <button id="btnSubmit" class="button-44">Submit</button>
+        </p>
+      </form>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
